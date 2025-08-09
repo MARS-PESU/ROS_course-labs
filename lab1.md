@@ -166,5 +166,6 @@ By the end of this assignment we require you to submit the following screenshots
 2. type `rviz2` in terminal.
 3. type `tail -n 5 ~/.bashrc` in terminal.
 <img width="1044" height="1742" alt="image" src="https://github.com/user-attachments/assets/2ca30921-1287-4c63-898d-97b6d5be9a19" />
+
 - remember while submitting the images, we only want the images, no word, doc, pdf etc
 - all the images should be similar to whatever sample is given
