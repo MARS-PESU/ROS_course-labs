@@ -4,6 +4,15 @@
 
 **Tutorial level:** Beginner
 
+start with closing all the previous terminals
+then open a new terminal and run the following:
+``` bash
+echo -e '\n# Auto-set ROS namespace from hostname\nexport ROS_NAMESPACE=$(hostname)\necho -e "\033[1;32m[ROS 2]\033[0m Namespace set to: \033[1;34m$ROS_NAMESPACE\033[0m"' >> ~/.bashrc
+```
+then close all terminals again,
+open a new terminal and then continue
+
+
 ### note: Take all screenshots the way it has been take in the images added below
 
 **Time:** 15 minutes
