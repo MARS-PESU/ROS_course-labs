@@ -1,5 +1,4 @@
 # Using turtlesim, ros2, and rqt — ROS 2 Documentation: Humble  documentation
-**You're reading the documentation for an older, but still supported, version of ROS 2. For information on the latest version, please have a look at [Kilted](../../../../kilted/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html).**
 
 **Goal:** Install and use the turtlesim package and rqt tools to prepare for upcoming tutorials.
 
@@ -101,7 +100,7 @@ Under the command, you will see messages from the node. There you can see the de
 
 The simulator window should appear, with a random turtle in the center.
 
-![../../../_images/turtlesim.png](../../../_images/turtlesim.png)
+![](https://docs.ros.org/en/humble/_images/turtlesim.png)
 
 ### [3 Use turtlesim](#id6)
 [](#use-turtlesim "Link to this heading")
@@ -160,8 +159,7 @@ Note
 
 It may take some time for rqt to locate all the plugins. If you click on **Plugins** but don’t see **Services** or any other options, you should close rqt and enter the command `rqt --force-discover` in your terminal.
 
-![../../../_images/rqt.png](../../../_images/rqt.png)
-
+![](https://docs.ros.org/en/humble/_images/rqt.png)
 Use the refresh button to the left of the **Service** dropdown list to ensure all the services of your turtlesim node are available.
 
 Click on the **Service** dropdown list to see turtlesim’s services, and select the `/spawn` service.
@@ -174,8 +172,7 @@ Give the new turtle a unique name, like `turtle2`, by double-clicking between th
 
 Next enter some valid coordinates at which to spawn the new turtle, like `x = 1.0` and `y = 1.0`.
 
-![../../../_images/spawn.png](../../../_images/spawn.png)
-
+![](https://docs.ros.org/en/humble/_images/spawn.png)
 Note
 
 If you try to spawn a new turtle with the same name as an existing turtle, like the default `turtle1`, you will get an error message in the terminal running `turtlesim_node`:
@@ -196,15 +193,14 @@ If you refresh the service list in rqt, you will also see that now there are ser
 
 Now let’s give `turtle1` a unique pen using the `/set_pen` service:
 
-![../../../_images/set_pen.png](../../../_images/set_pen.png)
-
+![](https://docs.ros.org/en/humble/_images/set_pen.png)
 The values for **r**, **g** and **b**, which are between 0 and 255, set the color of the pen `turtle1` draws with, and **width** sets the thickness of the line.
 
 To have `turtle1` draw with a distinct red line, change the value of **r** to 255, and the value of **width** to 5. Don’t forget to call the service after updating the values.
 
 If you return to the terminal where `turtle_teleop_key` is running and press the arrow keys, you will see `turtle1`’s pen has changed.
 
-![../../../_images/new_pen.png](../../../_images/new_pen.png)
+![../../../_images/new_pen.png](https://docs.ros.org/en/humble/_images/new_pen.png)
 
 You’ve probably also noticed that there’s no way to move `turtle2`. That’s because there is no teleop node for `turtle2`.
 
@@ -223,7 +219,7 @@ $ ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtl
 
 Now, you can move `turtle2` when this terminal is active, and `turtle1` when the other terminal running `turtle_teleop_key` is active.
 
-![../../../_images/remap.png](../../../_images/remap.png)
+![../../../_images/remap.png](https://docs.ros.org/en/humble/_images/remap.png)
 
 ### [7 Close turtlesim](#id10)
 [](#close-turtlesim "Link to this heading")
