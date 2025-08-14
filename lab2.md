@@ -9,6 +9,10 @@ then open a new terminal and run the following:
 ``` bash
 echo -e '\n# Auto-set ROS namespace from hostname\nexport ROS_NAMESPACE=$(hostname)\necho -e "\033[1;32m[ROS 2]\033[0m Namespace set to: \033[1;34m$ROS_NAMESPACE\033[0m"' >> ~/.bashrc
 ```
+
+``` bash
+echo -e '\n# Auto-set ROS namespace and domain from hostname\nexport ROS_NAMESPACE=$(hostname)\nexport ROS_DOMAIN_ID=$(( $(hostname | cksum | cut -d " " -f1) % 100 ))\necho -e "\033[1;32m[ROS 2]\033[0m Namespace: \033[1;34m$ROS_NAMESPACE\033[0m | Domain ID: \033[1;36m$ROS_DOMAIN_ID\033[0m"' >> ~/.bashrc
+```
 then close all terminals again,
 open a new terminal and then continue
 
@@ -76,8 +80,8 @@ As always, start by sourcing your setup files in a new terminal, as described in
 Install the turtlesim package for your ROS 2 distro:
 
 ```
-$ sudo apt update
-$ sudo apt install ros-humble-turtlesim
+sudo apt update
+sudo apt install ros-humble-turtlesim
 
 ```
 
@@ -85,7 +89,7 @@ $ sudo apt install ros-humble-turtlesim
 To check if the package is installed, run the following command, which should return a list of turtlesim’s executables:
 
 ```
-$ ros2 pkg executables turtlesim
+ros2 pkg executables turtlesim
 turtlesim draw_square
 turtlesim mimic
 turtlesim turtle_teleop_key
@@ -100,7 +104,7 @@ turtlesim turtlesim_node
 To start turtlesim, enter the following command in your terminal:
 
 ```
-$ ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtlesim_node
 [INFO] [turtlesim]: Starting turtlesim with node name /turtlesim
 [INFO] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
 
@@ -121,7 +125,7 @@ Open a new terminal and source ROS 2 again.
 Now you will run a new node to control the turtle in the first node:
 
 ```
-$ ros2 run turtlesim turtle_teleop_key
+ros2 run turtlesim turtle_teleop_key
 
 ```
 
@@ -137,10 +141,10 @@ Pressing an arrow key will only cause the turtle to move a short distance and th
 You can see the nodes, and their associated topics, services, and actions, using the `list` subcommands of the respective commands:
 
 ```
-$ ros2 node list
-$ ros2 topic list
-$ ros2 service list
-$ ros2 action list
+ros2 node list
+ros2 topic list
+ros2 service list
+ros2 action list
 
 ```
 
@@ -153,8 +157,8 @@ You will learn more about these concepts in the coming tutorials. Since the goal
 Open a new terminal to install `rqt` and its plugins:
 
 ```
-$ sudo apt update
-$ sudo apt install '~nros-humble-rqt*'
+sudo apt update
+sudo apt install '~nros-humble-rqt*'
 
 ```
 
@@ -223,7 +227,7 @@ You need a second teleop node in order to control `turtle2`. However, if you try
 In a new terminal, source ROS 2, and run:
 
 ```
-$ ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel
+ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel
 
 ```
 
