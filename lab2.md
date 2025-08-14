@@ -4,6 +4,8 @@
 
 **Tutorial level:** Beginner
 
+### note: Take all screenshots the way it has been take in the images added below
+
 **Time:** 15 minutes
 
 Contents
