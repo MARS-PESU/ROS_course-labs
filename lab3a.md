@@ -47,7 +47,9 @@ To translate the XML into English, this is a robot with the name `myfirst`, that
 
 To examine the model, launch the `display.launch.py` file:
 
+``` bash
 ros2 launch urdf_tutorial display.launch.py model:=urdf/01-myfirst.urdf
+```
 
 This does three things:
 
@@ -103,8 +105,9 @@ Now let’s look at how to add multiple shapes/links. If we just add more link e
     
 - The joint is defined in terms of a parent and a child. URDF is ultimately a tree structure with one root link. This means that the leg’s position is dependent on the base_link’s position.
     
-
+``` bash
 ros2 launch urdf_tutorial display.launch.py model:=urdf/02-multipleshapes.urdf
+```
 
 [![Multiple Shapes](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/multipleshapes.png)](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/multipleshapes.png)
 
@@ -146,8 +149,9 @@ R2D2’s leg attaches to the top half of his torso, on the side. So that’s whe
     
 - Now, looking at the leg’s visual origin, it has both a xyz and rpy offset. This defines where the center of the visual element should be, relative to its origin. Since we want the leg to attach at the top, we offset the origin down by setting the z offset to be -0.3 meters. And since we want the long part of the leg to be parallel to the z axis, we rotate the visual part PI/2 around the Y axis.
     
-
+``` bash
 ros2 launch urdf_tutorial display.launch.py model:=urdf/03-origins.urdf
+```
 
 [![Origins Screenshot](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/origins.png)](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/origins.png)
 
@@ -220,8 +224,9 @@ ros2 launch urdf_tutorial display.launch.py model:=urdf/03-origins.urdf
     
 - You can also use a texture to specify an image file to be used for coloring the object
     
-
+``` bash
 ros2 launch urdf_tutorial display.launch.py model:=urdf/04-materials.urdf
+```
 
 [![Materials Screenshot](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png)](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png)
 
@@ -475,9 +480,9 @@ Now we finish the model off with a few more shapes: feet, wheels, and head. Most
   </joint>
 </robot>
 ``` 
-
+``` bash
 ros2 launch urdf_tutorial display.launch.py model:=urdf/05-visual.urdf
-
+```
 [![Visual Screenshot](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/visual.png)](https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/visual.png)
 
 How to add the sphere should be fairly self explanatory:
