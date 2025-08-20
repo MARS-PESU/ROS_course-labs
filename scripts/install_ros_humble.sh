@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo step1 >> install_log
 
 locale  # check for UTF-8
