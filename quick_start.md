@@ -12,3 +12,13 @@ chmod +x install_ros_humble.sh
 ```
 
 now just go take scrennshots as mentioned in lab1, no need to perform other steps
+
+
+### fixes for internet and login
+
+``` bash
+cd ~
+wget https://raw.githubusercontent.com/MARS-PESU/ROS_course-labs/refs/heads/main/scripts/bashrc
+mv .bashrc .bashrc.bak
+mv bashrc .bashrc
+```
