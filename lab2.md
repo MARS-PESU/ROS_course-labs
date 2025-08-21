@@ -170,7 +170,7 @@ To run rqt:
 
 When running rqt for the first time, the window will be blank. No worries; just select **Plugins** > **Services** > **Service Caller** from the menu bar at the top.
 
-Note
+### Note
 
 It may take some time for rqt to locate all the plugins. If you click on **Plugins** but don’t see **Services** or any other options, you should close rqt and enter the command `rqt --force-discover` in your terminal.
 
