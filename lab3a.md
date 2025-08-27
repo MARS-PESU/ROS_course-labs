@@ -21,6 +21,11 @@ Note
 
 This tutorial assumes you know how to write well-formatted XML code
 
+please install the required files fr this tutorial using:
+``` bash
+sudo apt install ros-humble-urdf-tutorial
+```
+
 In this tutorial, we’re going to build a visual model of a robot that vaguely looks like R2D2. In later tutorials, you’ll learn how to [articulate the model](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html), [add in some physical properties](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html), and [generate neater code with xacro](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html), but for now, we’re going to focus on getting the visual geometry correct.
 
 Before continuing, make sure you have the [joint_state_publisher](https://index.ros.org/p/joint_state_publisher) package installed. If you installed [urdf_tutorial](https://index.ros.org/p/urdf_tutorial) binaries, this should already be the case. If not, please update your installation to include that package (use `rosdep` to check).
