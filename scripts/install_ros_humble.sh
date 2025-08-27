@@ -25,6 +25,7 @@ sudo dpkg -i /tmp/ros2-apt-source.deb
 
 echo step4 >> install_log
 
+sudo apt update &&sudo apt upgrade
 sudo apt install ros-humble-desktop
 sudo apt install ros-dev-tools
 
