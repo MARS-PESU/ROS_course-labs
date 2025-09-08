@@ -148,6 +148,7 @@ ros2 run turtle_logger turtle_logger_node
 Check the log file:
 
 ```bash
+cd ~/ros2_ws
 cat turtle_log.txt
 ```
 
@@ -162,6 +163,11 @@ You’ll see entries like:
 
 ✅ Now you’ve run a standard ROS package and created your own custom logging node that subscribes to topics and writes messages to a file.
 
+#### we can now delete this file
+
+```bash
+rm ~/ros2_ws/turtle_log.txt
+```
 
 
 ## MAIN TASK:
@@ -203,4 +209,8 @@ You’ll see many:
 
 Perfect for logging exercises 🚀
 
-#### go ahead and make the logger for any of the 3 topics
+#### go ahead and modify the logger for any of these 3 new topics
+
+
+### Submission:
+attach the logged file for the last task
